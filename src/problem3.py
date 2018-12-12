@@ -290,12 +290,11 @@ def problem3b(m, r):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
-    t = 0
-    for k in range (m+1):
-        n = k+1
-        d = (r+k)**(k+1)
-        t = t + (n/d)
-        return t
+    a = 0
+    for k in range (m):
+        b = (1 + k) / ((r + k) ** (k + 1))
+        a = a + b
+    return a
 
 
 ###############################################################################
