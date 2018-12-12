@@ -3,8 +3,8 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nelson Rainey.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the  sum_of_digits  function defined below.
+# Done: 2.  READ the doc-string for the  sum_of_digits  function defined below.
 # It is the same  sum_of_digits  function that you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -163,7 +163,7 @@ def problem3a(r, s):
           -- 5 cubed is   125, whose sum of digits is  8, which is NOT odd.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -172,6 +172,13 @@ def problem3a(r, s):
     #    **  use (call) the   sum_of_digits   function
     #    **  that is DEFINED ABOVE.
     ###########################################################################
+    b = 0
+    for k in range (r,s+1):
+        a = k**3
+        c = sum_of_digits(a)
+        if c%2>0:
+            b = b + k
+    return b
 
 
 def run_test_problem3b():
@@ -283,6 +290,12 @@ def problem3b(m, r):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+    t = 0
+    for k in range (m+1):
+        n = k+1
+        d = (r+k)**(k+1)
+        t = t + (n/d)
+        return t
 
 
 ###############################################################################
