@@ -104,7 +104,7 @@ def problem1(square, thickness, window):
     # Done: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    window.render()
+
     square.attach_to(window)
     g = square.length_of_each_side
     j = square.center
@@ -118,6 +118,7 @@ def problem1(square, thickness, window):
     bob.color = square.outline_color
     bob.thickness = thickness
     bob.attach_to(window)
+    window.render()
 
 
 # -----------------------------------------------------------------------------
